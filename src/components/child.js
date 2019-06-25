@@ -1,8 +1,11 @@
-import React, {Component} from 'react';
-import {useWebsocketState} from '../context/websocket.context'
+/*
+    Example of react-context-saga with useSagaState
+*/
+import React from 'react';
+import {useSagaState} from 'react-context-saga'
 
 export default function Child(){
-    const [state, dispatch] = useWebsocketState();
+    const [state] = useSagaState('websocket');
 
     return (
         <div>

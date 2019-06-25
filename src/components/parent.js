@@ -1,15 +1,21 @@
-import React, {Component} from 'react';
-import WebsocketContext from '../context/websocket.context'
+/*
+    Example of react-context-saga using Context.Consumer
+*/
+import React from 'react';
+import {getConsumer} from 'react-context-saga'
+
+const WebsocketConsumer = getConsumer('websocket')
 
 export default function Parent(){
-    console.log("Render parent")
     return (
-        <WebsocketContext.Consumer >
-            {([state , dispatch]) => 
+        <WebsocketConsumer>
+            {([state]) => 
                 <div>
                     Connected {state.get("connected")?'connected':'not connected'}
+                    <br/>
+                    React Proyects {state.get("reactProyects")}
                 </div>
             }
-        </WebsocketContext.Consumer>
+        </WebsocketConsumer>
     )
 }
