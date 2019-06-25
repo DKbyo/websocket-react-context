@@ -1,6 +1,6 @@
 ## websocket-react-context
 
-This is a brief example of use websockets with the new React Context API, I tried to follow the react-redux-saga aproach, so you can declare async functions in ./sagas/example.saga.js and call them in ./components/grandParent.js using dispatch. 
+This is a brief example of use websockets with the new React Context API, I tried to follow the react-redux-saga aproach, so you can declare async functions in [./sagas/example.saga.js](https://github.com/DKbyo/websocket-react-context/blob/master/src/sagas/example.saga.js) and call them in [./components/grandParent.js](https://github.com/DKbyo/websocket-react-context/blob/master/src/components/grandParent.js) using dispatch. 
 
 ## How call async functions?
 
